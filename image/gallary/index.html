@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+    <!-- Nature -->
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" class="gallery-item nature" onclick="openLightbox(0)">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600" class="gallery-item nature" onclick="openLightbox(1)">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600" class="gallery-item nature" onclick="openLightbox(2)">
+
+    <!-- City -->
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600" class="gallery-item city" onclick="openLightbox(3)">
+    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600" class="gallery-item city" onclick="openLightbox(4)">
+    <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?w=600" class="gallery-item city" onclick="openLightbox(5)">
+
+    <!-- Extra Attractive -->
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" class="gallery-item nature" onclick="openLightbox(6)">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" class="gallery-item city" onclick="openLightbox(7)">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+    <div class="controls">
+        <button onclick="prevImage()">❮</button>
+        <button onclick="nextImage()">❯</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
